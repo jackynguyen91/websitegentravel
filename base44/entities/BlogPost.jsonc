@@ -1,0 +1,75 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Ti\u00eau \u0111\u1ec1"
+    },
+    "slug": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn"
+    },
+    "thumbnail": {
+      "type": "string",
+      "title": "\u1ea2nh \u0111\u1ea1i di\u1ec7n"
+    },
+    "summary": {
+      "type": "string",
+      "title": "T\u00f3m t\u1eaft"
+    },
+    "content": {
+      "type": "string",
+      "title": "N\u1ed9i dung"
+    },
+    "gallery_images": {
+      "type": "array",
+      "title": "\u1ea2nh trong b\u00e0i (t\u1ed1i \u0111a 6 \u1ea3nh)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string",
+      "title": "Chuy\u00ean m\u1ee5c",
+      "enum": [
+        "Kinh nghi\u1ec7m",
+        "\u0110i\u1ec3m \u0111\u1ebfn",
+        "\u1ea8m th\u1ef1c",
+        "Tin GenTravel"
+      ],
+      "enumColors": [
+        "blue",
+        "green",
+        "yellow",
+        "purple"
+      ]
+    },
+    "published_at": {
+      "type": "string",
+      "title": "Ng\u00e0y \u0111\u0103ng"
+    }
+  },
+  "required": [
+    "title",
+    "slug"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "ReportSetting",
+  "type": "object",
+  "properties": {
+    "recipients": {
+      "type": "array",
+      "title": "Email nh\u1eadn b\u00e1o c\u00e1o",
+      "items": {
+        "type": "string"
+      }
+    },
+    "weekday": {
+      "type": "string",
+      "title": "Ng\u00e0y g\u1eedi trong tu\u1ea7n",
+      "enum": [
+        "Th\u1ee9 2",
+        "Th\u1ee9 3",
+        "Th\u1ee9 4",
+        "Th\u1ee9 5",
+        "Th\u1ee9 6",
+        "Th\u1ee9 7",
+        "Ch\u1ee7 nh\u1eadt"
+      ],
+      "enumColors": [
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "blue",
+        "yellow"
+      ],
+      "default": "Th\u1ee9 2"
+    },
+    "enabled": {
+      "type": "boolean",
+      "title": "B\u1eadt g\u1eedi t\u1ef1 \u0111\u1ed9ng",
+      "default": true
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "tour_id": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "tour_slug": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn tour"
+    },
+    "customer_name": {
+      "type": "string",
+      "title": "T\u00ean kh\u00e1ch"
+    },
+    "rating": {
+      "type": "number",
+      "title": "\u0110i\u1ec3m \u0111\u00e1nh gi\u00e1 (1-5)"
+    },
+    "comment": {
+      "type": "string",
+      "title": "N\u1ed9i dung"
+    }
+  },
+  "required": [
+    "tour_slug",
+    "customer_name",
+    "rating"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

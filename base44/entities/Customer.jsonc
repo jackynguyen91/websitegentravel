@@ -1,0 +1,119 @@
+{
+  "name": "Customer",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "title": "H\u1ecd t\u00ean"
+    },
+    "phone": {
+      "type": "string",
+      "title": "S\u1ed1 \u0111i\u1ec7n tho\u1ea1i"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "city": {
+      "type": "string",
+      "title": "T\u1ec9nh / Th\u00e0nh ph\u1ed1"
+    },
+    "source_channel": {
+      "type": "string",
+      "title": "Ngu\u1ed3n kh\u00e1ch",
+      "enum": [
+        "Website",
+        "Facebook",
+        "Zalo",
+        "Hotline",
+        "\u0110\u1ea1i l\u00fd",
+        "Walk-in"
+      ],
+      "enumColors": [
+        "blue",
+        "blue",
+        "green",
+        "yellow",
+        "purple",
+        "gray"
+      ]
+    },
+    "segment": {
+      "type": "string",
+      "title": "Ph\u00e2n nh\u00f3m",
+      "enum": [
+        "M\u1edbi",
+        "Th\u01b0\u1eddng xuy\u00ean",
+        "VIP",
+        "Ti\u1ec1m n\u0103ng"
+      ],
+      "enumColors": [
+        "gray",
+        "blue",
+        "purple",
+        "yellow"
+      ],
+      "default": "M\u1edbi"
+    },
+    "tier": {
+      "type": "string",
+      "title": "H\u1ea1ng kh\u00e1ch",
+      "enum": [
+        "M\u1edbi",
+        "Th\u00e2n thi\u1ebft",
+        "VIP"
+      ],
+      "enumColors": [
+        "gray",
+        "blue",
+        "purple"
+      ],
+      "default": "M\u1edbi"
+    },
+    "tags": {
+      "type": "array",
+      "title": "Th\u1ebb",
+      "items": {
+        "type": "string"
+      }
+    },
+    "birthday": {
+      "type": "string",
+      "title": "Sinh nh\u1eadt (YYYY-MM-DD)"
+    },
+    "owner": {
+      "type": "string",
+      "title": "Nh\u00e2n vi\u00ean ph\u1ee5 tr\u00e1ch"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

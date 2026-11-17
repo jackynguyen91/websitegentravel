@@ -1,0 +1,85 @@
+{
+  "name": "Service",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "T\u00ean d\u1ecbch v\u1ee5"
+    },
+    "slug": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn"
+    },
+    "type": {
+      "type": "string",
+      "title": "Lo\u1ea1i d\u1ecbch v\u1ee5",
+      "enum": [
+        "V\u00e9 m\u00e1y bay",
+        "V\u00e9 tham quan",
+        "Kh\u00e1ch s\u1ea1n",
+        "Visa"
+      ],
+      "enumColors": [
+        "blue",
+        "yellow",
+        "purple",
+        "green"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "title": "M\u00f4 t\u1ea3 ng\u1eafn"
+    },
+    "highlights": {
+      "type": "array",
+      "title": "\u0110i\u1ec3m n\u1ed5i b\u1eadt",
+      "items": {
+        "type": "string"
+      }
+    },
+    "image": {
+      "type": "string",
+      "title": "\u1ea2nh \u0111\u1ea1i di\u1ec7n"
+    },
+    "price_from": {
+      "type": "number",
+      "title": "Gi\u00e1 t\u1eeb (VND)"
+    },
+    "price_unit": {
+      "type": "string",
+      "title": "\u0110\u01a1n v\u1ecb gi\u00e1"
+    },
+    "price_note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa gi\u00e1"
+    },
+    "is_active": {
+      "type": "boolean",
+      "title": "\u0110ang hi\u1ec3n th\u1ecb",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "type"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

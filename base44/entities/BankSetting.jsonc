@@ -1,0 +1,58 @@
+{
+  "name": "BankSetting",
+  "type": "object",
+  "properties": {
+    "bank_id": {
+      "type": "string",
+      "title": "M\u00e3 ng\u00e2n h\u00e0ng (VietQR)"
+    },
+    "bank_name": {
+      "type": "string",
+      "title": "T\u00ean ng\u00e2n h\u00e0ng"
+    },
+    "account_number": {
+      "type": "string",
+      "title": "S\u1ed1 t\u00e0i kho\u1ea3n nh\u1eadn ti\u1ec1n"
+    },
+    "account_name": {
+      "type": "string",
+      "title": "Ch\u1ee7 t\u00e0i kho\u1ea3n"
+    },
+    "auto_confirm": {
+      "type": "boolean",
+      "title": "T\u1ef1 \u0111\u1ed9ng x\u00e1c nh\u1eadn thanh to\u00e1n",
+      "default": true
+    },
+    "webhook_token": {
+      "type": "string",
+      "title": "M\u00e3 b\u1ea3o m\u1eadt webhook"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "required": [],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

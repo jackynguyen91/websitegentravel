@@ -1,0 +1,66 @@
+{
+  "name": "ActivityLog",
+  "type": "object",
+  "properties": {
+    "module": {
+      "type": "string",
+      "title": "Ph\u00e2n h\u1ec7",
+      "enum": [
+        "\u0110\u01a1n h\u00e0ng",
+        "Thanh to\u00e1n",
+        "Tour",
+        "\u0110\u1ed1i t\u00e1c",
+        "Nh\u00e2n s\u1ef1",
+        "B\u00e1o c\u00e1o",
+        "H\u1ec7 th\u1ed1ng"
+      ],
+      "enumColors": [
+        "blue",
+        "green",
+        "purple",
+        "yellow",
+        "pink",
+        "gray",
+        "gray"
+      ]
+    },
+    "action": {
+      "type": "string",
+      "title": "H\u00e0nh \u0111\u1ed9ng"
+    },
+    "detail": {
+      "type": "string",
+      "title": "Chi ti\u1ebft"
+    },
+    "actor": {
+      "type": "string",
+      "title": "Ng\u01b0\u1eddi th\u1ef1c hi\u1ec7n"
+    },
+    "entity_id": {
+      "type": "string",
+      "title": "M\u00e3 b\u1ea3n ghi"
+    }
+  },
+  "required": [
+    "module",
+    "action"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

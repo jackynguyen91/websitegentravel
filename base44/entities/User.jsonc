@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The role of the user in the app",
+      "enum": [
+        "admin",
+        "user"
+      ]
+    },
+    "staff_role": {
+      "type": "string",
+      "title": "Vai tr\u00f2 n\u1ed9i b\u1ed9",
+      "enum": [
+        "Qu\u1ea3n l\u00fd",
+        "Kinh doanh",
+        "\u0110i\u1ec1u h\u00e0nh",
+        "K\u1ebf to\u00e1n",
+        "Marketing"
+      ],
+      "enumColors": [
+        "purple",
+        "blue",
+        "green",
+        "yellow",
+        "pink"
+      ],
+      "default": "Kinh doanh"
+    },
+    "staff_status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i nh\u00e2n s\u1ef1",
+      "enum": [
+        "\u0110ang l\u00e0m vi\u1ec7c",
+        "T\u1ea1m ngh\u1ec9"
+      ],
+      "enumColors": [
+        "green",
+        "yellow"
+      ],
+      "default": "\u0110ang l\u00e0m vi\u1ec7c"
+    }
+  },
+  "required": [
+    "role"
+  ],
+  "name": "User",
+  "type": "object"
+}

@@ -1,0 +1,90 @@
+{
+  "name": "Departure",
+  "type": "object",
+  "properties": {
+    "tour_id": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "tour_title": {
+      "type": "string",
+      "title": "T\u00ean tour"
+    },
+    "departure_date": {
+      "type": "string",
+      "title": "Ng\u00e0y kh\u1edfi h\u00e0nh (YYYY-MM-DD)"
+    },
+    "seats_total": {
+      "type": "number",
+      "title": "T\u1ed5ng s\u1ed1 ch\u1ed7"
+    },
+    "seats_booked": {
+      "type": "number",
+      "title": "Ch\u1ed7 \u0111\u00e3 b\u00e1n"
+    },
+    "seats_held": {
+      "type": "number",
+      "title": "Ch\u1ed7 \u0111ang gi\u1eef"
+    },
+    "guide_name": {
+      "type": "string",
+      "title": "HDV ph\u1ee5 tr\u00e1ch"
+    },
+    "guide_phone": {
+      "type": "string",
+      "title": "S\u0110T HDV"
+    },
+    "vehicle": {
+      "type": "string",
+      "title": "Xe / nh\u00e0 xe"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa \u0111i\u1ec1u h\u00e0nh"
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i",
+      "enum": [
+        "M\u1edf b\u00e1n",
+        "S\u1eafp \u0111\u1ea7y",
+        "\u0110\u00e3 \u0111\u1ea7y",
+        "\u0110\u00e3 kh\u1edfi h\u00e0nh",
+        "\u0110\u00e3 h\u1ee7y"
+      ],
+      "enumColors": [
+        "green",
+        "yellow",
+        "red",
+        "blue",
+        "gray"
+      ]
+    }
+  },
+  "required": [
+    "tour_id",
+    "departure_date"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

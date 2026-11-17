@@ -1,0 +1,99 @@
+{
+  "name": "Partner",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "T\u00ean \u0111\u1ed1i t\u00e1c"
+    },
+    "type": {
+      "type": "string",
+      "title": "Lo\u1ea1i d\u1ecbch v\u1ee5",
+      "enum": [
+        "Kh\u00e1ch s\u1ea1n",
+        "Nh\u00e0 xe",
+        "Nh\u00e0 h\u00e0ng",
+        "H\u01b0\u1edbng d\u1eabn vi\u00ean",
+        "H\u00e3ng bay",
+        "Kh\u00e1c"
+      ],
+      "enumColors": [
+        "purple",
+        "blue",
+        "yellow",
+        "green",
+        "pink",
+        "gray"
+      ]
+    },
+    "contact_person": {
+      "type": "string",
+      "title": "Ng\u01b0\u1eddi li\u00ean h\u1ec7"
+    },
+    "phone": {
+      "type": "string",
+      "title": "\u0110i\u1ec7n tho\u1ea1i"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "address": {
+      "type": "string",
+      "title": "\u0110\u1ecba ch\u1ec9"
+    },
+    "city": {
+      "type": "string",
+      "title": "T\u1ec9nh / Th\u00e0nh ph\u1ed1"
+    },
+    "rating": {
+      "type": "number",
+      "title": "\u0110\u00e1nh gi\u00e1 (1-5)"
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i",
+      "enum": [
+        "\u0110ang h\u1ee3p t\u00e1c",
+        "T\u1ea1m d\u1eebng",
+        "Ng\u1eebng h\u1ee3p t\u00e1c"
+      ],
+      "enumColors": [
+        "green",
+        "yellow",
+        "gray"
+      ],
+      "default": "\u0110ang h\u1ee3p t\u00e1c"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa h\u1ee3p \u0111\u1ed3ng"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

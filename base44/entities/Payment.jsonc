@@ -1,0 +1,154 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "direction": {
+      "type": "string",
+      "title": "Lo\u1ea1i giao d\u1ecbch",
+      "enum": [
+        "Thu t\u1eeb kh\u00e1ch",
+        "Chi \u0111\u1ed1i t\u00e1c"
+      ],
+      "enumColors": [
+        "green",
+        "purple"
+      ],
+      "default": "Thu t\u1eeb kh\u00e1ch"
+    },
+    "booking_code": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u01a1n"
+    },
+    "booking_id": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u1eb7t ch\u1ed7 n\u1ed9i b\u1ed9"
+    },
+    "tour_id": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "customer_name": {
+      "type": "string",
+      "title": "Kh\u00e1ch h\u00e0ng"
+    },
+    "partner_id": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u1ed1i t\u00e1c"
+    },
+    "partner_name": {
+      "type": "string",
+      "title": "\u0110\u1ed1i t\u00e1c"
+    },
+    "amount": {
+      "type": "number",
+      "title": "S\u1ed1 ti\u1ec1n (VND)"
+    },
+    "kind": {
+      "type": "string",
+      "title": "N\u1ed9i dung",
+      "enum": [
+        "\u0110\u1eb7t c\u1ecdc",
+        "Thanh to\u00e1n c\u00f2n l\u1ea1i",
+        "Thanh to\u00e1n to\u00e0n b\u1ed9",
+        "Ho\u00e0n ti\u1ec1n",
+        "Chi ph\u00ed \u0111\u1ed1i t\u00e1c"
+      ],
+      "enumColors": [
+        "yellow",
+        "blue",
+        "green",
+        "pink",
+        "purple"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "title": "Ph\u01b0\u01a1ng th\u1ee9c",
+      "enum": [
+        "Chuy\u1ec3n kho\u1ea3n",
+        "VNPay",
+        "MoMo",
+        "Ti\u1ec1n m\u1eb7t",
+        "VietQR",
+        "Th\u1ebb t\u00edn d\u1ee5ng",
+        "\u0110\u1ea1i l\u00fd thu"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "pink",
+        "green",
+        "blue",
+        "purple",
+        "yellow"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i",
+      "enum": [
+        "\u0110\u00e3 thanh to\u00e1n",
+        "Ch\u1edd x\u1eed l\u00fd",
+        "Th\u1ea5t b\u1ea1i",
+        "\u0110\u00e3 ho\u00e0n ti\u1ec1n"
+      ],
+      "enumColors": [
+        "green",
+        "yellow",
+        "red",
+        "gray"
+      ]
+    },
+    "paid_at": {
+      "type": "string",
+      "title": "Th\u1eddi \u0111i\u1ec3m thanh to\u00e1n (ISO)"
+    },
+    "receipt_no": {
+      "type": "string",
+      "title": "S\u1ed1 phi\u1ebfu thu / chi"
+    },
+    "external_ref": {
+      "type": "string",
+      "title": "M\u00e3 giao d\u1ecbch ng\u00e2n h\u00e0ng"
+    },
+    "reconciled": {
+      "type": "boolean",
+      "title": "\u0110\u00e3 \u0111\u1ed1i so\u00e1t",
+      "default": false
+    },
+    "reconciled_at": {
+      "type": "string",
+      "title": "Th\u1eddi \u0111i\u1ec3m \u0111\u1ed1i so\u00e1t"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "required": [
+    "amount",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
